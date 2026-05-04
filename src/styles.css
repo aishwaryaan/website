@@ -135,6 +135,37 @@ body {
     position: sticky;
     top: 125px;
     z-index: 99;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-secondary);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .sub-nav-list {
@@ -143,6 +174,11 @@ body {
     gap: 40px;
     list-style: none;
     flex-wrap: wrap;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    flex-direction: row;
+    transition: all 0.3s ease;
 }
 
 .sub-nav-list li a {
@@ -473,14 +509,46 @@ body {
     
     .sub-nav {
         padding: 12px 20px;
+        justify-content: flex-start;
+    }
+    
+    .hamburger-menu {
+        display: flex;
     }
     
     .sub-nav-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--sub-nav-bg);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
+        padding: 20px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .sub-nav-list.open {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sub-nav-list li {
+        width: 100%;
+        text-align: center;
     }
     
     .sub-nav-list li a {
         font-size: 0.9rem;
+        display: block;
+        padding: 10px 0;
     }
     
     .content {
@@ -507,12 +575,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .sub-nav-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
     .btn-download {
         display: inline-block;
     }

@@ -6,9 +6,9 @@ export default function Tech() {
   const [selected, setSelected] = useState(null);
 
   const projects = [
-    { title: "Disaster Preparedness in Virtual Reality", desc: "VR simulation for preparation of Fire Disasters", details: "App Developed in Oculus Meta Quest 2 VR headset for fire disaster awareness and preparedness. It is a 'Serious game' with social cause to inculcate incident responsive behaviour in daily life and reduce risks. Tech stack used: Unity, C#, Blender", url:"https://youtu.be/kITby5Tniqc", img: "/tech project 1.png" },
+    { title: "Disaster Preparedness in Virtual Reality", desc: "VR simulation for preparation of Fire Disasters", details: "This is an app developed in Unity for Oculus Meta Quest 2 VR headset - for fire disaster awareness and preparedness. It is a 'Serious game' with social cause to inculcate incident responsive behaviour in daily life and reduce risks. This project was created with the goal of improving disaster preparedness through immersive experiences. There is a lack of importance given to fire training and we need a paradigm shift from firefighting ot fire prevention. We have presented this project to various industry experts in the corporate, and also won mutliple accolades with credible jury whose valuable insights movitate me to scale this further. Tech stack used in this project: Unity, C#, Blender", url:"https://youtu.be/kITby5Tniqc", img: "/tech project 1.png", pdf: "pict concepts.pdf" },
 
-    { title: "Business Analysis of Reliance Jio Infocomm", desc: "A Business Intelligence project", details: "Business Analysis of Reliance Jio Infocomm. Concepts included: Schema, ETL, OLAP, K-means clustering Tech stack used: Tableau, MySQL", pdf: "JioReportFinal.pdf", img: "/tech project 2.png" },
+    { title: "Business Analysis of Reliance Jio Infocomm", desc: "A Business Intelligence project", details: "This project explores the analysis of Jio’s business model and a data warehouse design using KPIs, schemas, and OLAP operations to support data-driven insights and better decision-making. Concepts included: Schema, ETL, OLAP. Tech stack used: Tableau, MySQL", pdf: "JioReportFinal.pdf", img: "/tech project 2.png" },
   //   {
   //   title: "AI Dashboard",
   //   desc: "Data visualization tool",
@@ -99,9 +99,9 @@ facilitating reliability of the application</li>
         <h2>Skills</h2>
         <div className="section-content">
         <ul>
-          <li><span style={{ color: '#00d4ff' }}>Frontend</span>: HTML, CSS, JavaScript, TypeScript, Jest</li>
-          <li><span style={{ color: '#00d4ff' }}>Backend</span>: Java, Python, SQL</li>
-          <li><span style={{ color: '#00d4ff' }}>Tools / Frameworks</span>: ReactJS, Git, Terraform, OCI</li>
+          <li><span style={{ color: '#00d4ff' }}>Frontend</span>: HTML, CSS, JavaScript, TypeScript, React, Jest</li>
+          <li><span style={{ color: '#00d4ff' }}>Backend</span>: Python, Java, SQL</li>
+          <li><span style={{ color: '#00d4ff' }}>Tools / Frameworks / Cloud</span>: ReactJS, Git, Terraform, OCI</li>
           <li><span style={{ color: '#00d4ff' }}>UX</span>: Figma, UX principles</li>
         </ul>
 
@@ -135,6 +135,9 @@ facilitating reliability of the application</li>
 
         </div>
       </section>
+      <a href="/AishwaryaResume.pdf" download className="btn-download" onClick={() => setIsMenuOpen(false)}>
+                Download Resume
+              </a>
 
       <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </div>

@@ -2,18 +2,18 @@ export default function Beyond() {
   const cards = [
   {
     title: "Photography",
-    text: "Capturing moments and light.",
-    img: "/photo.jpg"
+    text: "Capturing moments and light. (here: Ladakh)",
+    img: "/photography.png"
   },
   {
     title: "Travel",
-    text: "Exploring new places.",
+    text: "Exploring new places, cultures, and cuisines. (here: Meghalaya)",
     img: "/travel.jpg"
   },
   {
-    title: "Fitness",
-    text: "Staying active and healthy.",
-    img: "/fitness.jpg"
+    title: "Music",
+    text: "Listening to and creating music.",
+    img: "/music.PNG"
   }
 ];
 
