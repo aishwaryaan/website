@@ -14,6 +14,23 @@ export default function ProjectModal({ project, onClose }) {
             <img src={project.img} className="modal-img" />
           )}
 
+          {/* Text Details */}
+          <div className="modal-text">
+            <p>{project.details}</p>
+          </div>
+
+          <br></br>
+          
+
+          {/* External Link */}
+          {project.url && (
+            <p>
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                🔗 View Project
+              </a>
+            </p>
+          )}
+
           {/* YouTube Video */}
           {project.video && (
             <iframe
@@ -34,19 +51,6 @@ export default function ProjectModal({ project, onClose }) {
             ></iframe>
           )}
 
-          {/* External Link */}
-          {project.url && (
-            <p>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                🔗 View Project
-              </a>
-            </p>
-          )}
-
-          {/* Text */}
-          <div className="modal-text">
-            <p>{project.details}</p>
-          </div>
         </div>
       </div>
     </div>

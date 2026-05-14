@@ -277,6 +277,7 @@ body {
 
 .section-content {
     padding: 30px;
+    text-align: justify;
 }
 
 /* ========================================
@@ -455,6 +456,7 @@ body {
 .modal-text {
     color: var(--text-secondary);
     line-height: 1.8;
+    text-align: justify;
 }
 
 .modal-text p {
